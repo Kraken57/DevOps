@@ -28,15 +28,15 @@ Basically we do a `Logical Isolation` of the server that you rent from a provide
 
 ### How It Solves Real-World Problems:
     
-    Cost Efficiency: Just as you're generating rental income, companies save money by using VMs to host multiple applications on fewer physical machines, reducing hardware and maintenance costs.
+1. Cost Efficiency: Just as you're generating rental income, companies save money by using VMs to host multiple applications on fewer physical machines, reducing hardware and maintenance costs.
 
-    Resource Optimization: Instead of leaving the server's resources idle (similar to unused land), virtualization allows for efficient use of computing power, storage, and memory, maximizing resource usage.
+2. Resource Optimization: Instead of leaving the server's resources idle (similar to unused land), virtualization allows for efficient use of computing power, storage, and memory, maximizing resource usage.
 
-    Scalability: If you ever need more resources or space (just like if your family grew and you needed more of your land), you can adjust the number of VMs on the server, or scale the VMs to use more resources, depending on demand.
+3. Scalability: If you ever need more resources or space (just like if your family grew and you needed more of your land), you can adjust the number of VMs on the server, or scale the VMs to use more resources, depending on demand.
 
-    Isolation and Security: Even though you're sharing land with tenants, both you and your tenants have private, independent spaces. Similarly, in a virtualized environment, VMs are isolated from each other, ensuring that one application doesn’t interfere with another. This improves security and reliability.
+4. Isolation and Security: Even though you're sharing land with tenants, both you and your tenants have private, independent spaces. Similarly, in a virtualized environment, VMs are isolated from each other, ensuring that one application doesn’t interfere with another. This improves security and reliability.
 
-    Application Delivery:
+5. Application Delivery:
     In a business context, when delivering applications to consumers (just like providing space for tenants), VMs allow companies to deploy applications faster, manage updates efficiently, and reduce downtime. With virtualization, servers can host multiple versions of an app or service, ensuring smooth delivery to end users, much like offering high-quality rental properties without disturbing your own living situation.
 
 In summary, using virtual machines is like renting out unused land: it’s about maximizing efficiency, optimizing resources, and benefiting both you and others without compromising your own quality of life.
