@@ -77,7 +77,7 @@ Now you are successfully logged in to the aws instance.
 you can check for it. You can also create a S3 bucket from the terminal now by :
 
 ```shell
-    aws s3 mb <name>
+aws s3 mb <name>
 ```
 
 > **Go to [AWS DOCS](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html) to know more about the commands in AWS CLI.**
