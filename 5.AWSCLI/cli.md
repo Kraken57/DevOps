@@ -43,7 +43,7 @@ Now you are successfully logged in to the aws instance.
 
 ## Practical ways of doing all these
 
-### AWS CLI:
+### 1. AWS CLI :
 
 1. Download AWS CLI binary. [AWS CLI](https://aws.amazon.com/cli/)
 
@@ -78,3 +78,22 @@ you can check for it. You can also create a S3 bucket from the terminal now by :
 ```
 
 > **Go to [AWS DOCS](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html) to know more about the commands in AWS CLI.**
+
+---
+### 2. AWS CFT(AWS Cloud Formation Templates) :
+
+1. For Reference go [here](https://github.com/aws-cloudformation/aws-cloudformation-templates) if you want to make a CFT.
+
+2. Go to aws console and search for CFT >> Stacks.
+
+3. Click on create Stack.
+
+> If you already have the template ready form github repo select `template is ready`, and if not you can also `use a sample template`, or `create a template for designer`. You can upload either from a `Amazon S3 URL` or `Upload a template file`.
+
+**NOTE:** ***The above things are not covered in detail here because it falls under different topic called IAC. So we will study these in future.***
+
+
+---
+
+### 3. AWS API :
+
