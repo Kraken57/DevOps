@@ -44,3 +44,37 @@ Now you are successfully logged in to the aws instance.
 ## Practical ways of doing all these
 
 ### AWS CLI:
+
+1. Download AWS CLI binary. [AWS CLI](https://aws.amazon.com/cli/)
+
+2. Check if your aws cli is installed or not by running 
+
+```shell
+    aws version
+```
+3. Now you have to authenticate this aws cli with your aws account. So for that :
+    - Go to your aws console >> User option drop-down.
+    - Click on Security credentials.
+    - Go to Access Keys >> Create Access Keys
+    > Don't share this info to anyone.
+
+4. Now after you made you Access Key go back to console and type 
+
+```shell
+    aws configure
+```
+> *It will ask you to enter to enter the AWS Access Key ID and AWS Secret Access Key. Enter that, Then it will ask you the default region keep it as it is, default output format let it be json.* ***Now you are authenticated with aws.***
+
+5. You can check if you are authenticated or not by , let's suppose you have some S3 buckets created in you aws, by running 
+
+```shell
+    aws s3 ls
+```
+
+you can check for it. You can also create a S3 bucket from the terminal now by :
+
+```shell
+    aws s3 mb <name>
+```
+
+> **Go to [AWS DOCS](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html) to know more about the commands in AWS CLI.**
