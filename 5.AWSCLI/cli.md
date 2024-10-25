@@ -47,25 +47,28 @@ Now you are successfully logged in to the aws instance.
 
 1. Download AWS CLI binary. [AWS CLI](https://aws.amazon.com/cli/)
 
-2. Check if your aws cli is installed or not by running 
+2. Check if your aws cli is installed or not by running
 
 ```shell
     aws version
 ```
-3. Now you have to authenticate this aws cli with your aws account. So for that :
-    - Go to your aws console >> User option drop-down.
-    - Click on Security credentials.
-    - Go to Access Keys >> Create Access Keys
-    > Don't share this info to anyone.
 
-4. Now after you made you Access Key go back to console and type 
+3. Now you have to authenticate this aws cli with your aws account. So for that :
+
+   - Go to your aws console >> User option drop-down.
+   - Click on Security credentials.
+   - Go to Access Keys >> Create Access Keys
+     > Don't share this info to anyone.
+
+4. Now after you made you Access Key go back to console and type
 
 ```shell
     aws configure
 ```
-> *It will ask you to enter to enter the AWS Access Key ID and AWS Secret Access Key. Enter that, Then it will ask you the default region keep it as it is, default output format let it be json.* ***Now you are authenticated with aws.***
 
-5. You can check if you are authenticated or not by , let's suppose you have some S3 buckets created in you aws, by running 
+> _It will ask you to enter to enter the AWS Access Key ID and AWS Secret Access Key. Enter that, Then it will ask you the default region keep it as it is, default output format let it be json._ **_Now you are authenticated with aws._**
+
+5. You can check if you are authenticated or not by , let's suppose you have some S3 buckets created in you aws, by running
 
 ```shell
     aws s3 ls
@@ -80,6 +83,7 @@ you can check for it. You can also create a S3 bucket from the terminal now by :
 > **Go to [AWS DOCS](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html) to know more about the commands in AWS CLI.**
 
 ---
+
 ### 2. AWS CFT(AWS Cloud Formation Templates) :
 
 1. For Reference go [here](https://github.com/aws-cloudformation/aws-cloudformation-templates) if you want to make a CFT.
@@ -90,10 +94,41 @@ you can check for it. You can also create a S3 bucket from the terminal now by :
 
 > If you already have the template ready form github repo select `template is ready`, and if not you can also `use a sample template`, or `create a template for designer`. You can upload either from a `Amazon S3 URL` or `Upload a template file`.
 
-**NOTE:** ***The above things are not covered in detail here because it falls under different topic called IAC. So we will study these in future.***
-
+**NOTE:** **_The above things are not covered in detail here because it falls under different topic called IAC. So we will study these in future._**
 
 ---
 
 ### 3. AWS API :
 
+For reference
+
+- [Github](https://gist.github.com/mda590/679aba60ca03699d5b12a32314debdc0)
+- [BOTO3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+Below is an example of a simple boto3 script to create a ec2 instance.
+
+```python
+import boto3
+
+ec2 = boto3.resource('ec2')
+
+def lambda_handler(event, context):
+    # create filter for instances in running state
+    filters = [
+        {
+            'Name': 'instance-state-name',
+            'Values': ['running']
+        }
+    ]
+
+    # filter the instances based on filters() above
+    instances = ec2.instances.filter(Filters=filters)
+
+    # instantiate empty array
+    RunningInstances = []
+
+    for instance in instances:
+        # for each instance, append to array and print instance id
+        RunningInstances.append(instance.id)
+        print instance.id
+```
