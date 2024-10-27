@@ -23,3 +23,25 @@
     Example: `libC`
 
 **Not going into the details of it but these are the fundamentals of the OS.**
+
+
+## Shell Scripting
+
+Shell scripting lets you interact with the operating system via the command line, enabling automation and efficient task management.
+
+## Basic Shell Commands
+
+### 1. `free`
+Displays the amount of free and used memory on your system.
+
+### 2. `free -g`
+Shows memory information in gigabytes (GB) for easier reading.
+
+### 3. `nproc`
+Displays the number of processing units (CPU cores) available.
+
+### 4. `df -h`
+Shows disk space usage for each filesystem in a "human-readable" format (like MB, GB).
+
+### 5. `top`
+Opens a real-time view of running processes, displaying CPU and memory usage for each.

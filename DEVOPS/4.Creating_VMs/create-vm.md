@@ -26,7 +26,7 @@ In essence, instead of handling thousands of VMs manually, the EC2 API helps you
 2. Search for EC2 service in search box.
 3. Click on Instances and then Launch Instances.
 4. Fill you server Name and Select for any Quick Start (*preferred Ubuntu for begineers*).
-5. Select Insatance Type (*Prefer a free tier*).
+5. Select Instance Type (*Prefer a free tier*).
 6. Create a Key-Value Pair.
 
     -  RSA

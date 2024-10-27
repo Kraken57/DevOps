@@ -58,6 +58,7 @@ Now you are successfully logged in to the aws instance.
    - Go to your aws console >> User option drop-down.
    - Click on Security credentials.
    - Go to Access Keys >> Create Access Keys
+   
      > Don't share this info to anyone.
 
 4. Now after you made you Access Key go back to console and type
