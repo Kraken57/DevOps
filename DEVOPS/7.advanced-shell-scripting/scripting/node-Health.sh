@@ -10,13 +10,12 @@
 # Version : v1
 ########################################
 
-echo "Checking disk usage..."
+set -x # debug mode
+
 df -h
 
-echo "Checking memory usage (in GB)..."
 free -g
 
-echo "Checking the number of processing units..."
 nproc
 
 echo "Node health check complete."

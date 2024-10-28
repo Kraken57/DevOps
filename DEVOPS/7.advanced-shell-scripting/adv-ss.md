@@ -58,3 +58,6 @@ echo "Node health check complete."
    - Always test scripts locally to avoid unexpected issues.
 
 Following these guidelines helps create efficient, reliable, and maintainable shell scripts.
+
+
+*Instead of using `echo` everywhere as `echo` is not feasible use `set -x` at the start like this :*

@@ -10,3 +10,4 @@ Topics studied till now :
 4. [Creating Virtual Machines using AWS or Azure](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/4.Creating_VMs/create-vm.md)
 5. [AWS CLI Guide](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/5.AWSCLI/cli.md)
 6. [Shell-Scripting](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/6.shell-scripting/shell.md)
+7. [Advanced Shell-Scripting](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/7.advanced-shell-scripting/adv-ss.md)
