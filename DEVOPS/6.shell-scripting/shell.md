@@ -33,6 +33,7 @@ Shell scripting lets you interact with the operating system via the command line
 
 ***Some commands that I know***:
 - ls
+- pwd
 - exa
 - exa -la
 - man <command>
