@@ -61,3 +61,30 @@ Following these guidelines helps create efficient, reliable, and maintainable sh
 
 
 *Instead of using `echo` everywhere as `echo` is not feasible use `set -x` at the start like this :*
+
+```shell 
+#!/bin/bash
+
+
+set -x # debug mode
+
+df -h
+
+free -g
+
+nproc
+
+echo "Node health check complete."
+```
+
+
+### Command: `ps -ef`
+
+The `ps -ef` command is used in Unix/Linux systems to display a list of all running processes in a detailed format.
+
+- **`ps`**: Displays information about active processes.
+- **`-e`**: Lists all processes for all users.
+- **`-f`**: Shows a full-format listing with details like user ID (UID), process ID (PID), parent process ID (PPID), CPU usage, start time, and command.
+
+This command is useful for monitoring or managing system processes.
+
