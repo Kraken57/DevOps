@@ -82,9 +82,35 @@ echo "Node health check complete."
 
 The `ps -ef` command is used in Unix/Linux systems to display a list of all running processes in a detailed format.
 
-- **`ps`**: Displays information about active processes.
-- **`-e`**: Lists all processes for all users.
-- **`-f`**: Shows a full-format listing with details like user ID (UID), process ID (PID), parent process ID (PPID), CPU usage, start time, and command.
-
 This command is useful for monitoring or managing system processes.
+
+### Command Explanation: `ps -ef | grep "amazon"`
+
+The command `ps -ef | grep "amazon"` is used to search for running processes related to "amazon" on a Unix-based system.
+
+## Breakdown of the Command
+
+1. **`ps -ef`**:
+   - The `ps` command displays information about active processes.
+   - The `-e` flag shows all processes on the system.
+   - The `-f` flag provides a full-format listing, including additional details such as the user, PID, parent process ID, start time, and command.
+
+2. **`grep "amazon"`**:
+   - The `grep` command searches for the specified keyword, `"amazon"` in this case, within the output of `ps -ef`.
+   - This will filter and display only the lines that contain "amazon", helping locate any Amazon-related services or processes.
+
+## Example Usage
+
+```bash
+ps -ef | grep "amazon"
+
+### Sample Output 
+
+```shell
+root      1234     1  0 10:00 ?        00:00:01 /usr/bin/amazon-cloudwatch-agent
+user      2345  5678  0 10:05 ?        00:00:00 /amazon/kinesis-agent
+user      4567  6789  0 10:10 pts/0    00:00:00 grep --color=auto amazon
+```
+
+Here we get a ID to for each process so to get process with id use :
 
