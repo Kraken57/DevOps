@@ -36,33 +36,38 @@ echo "Node health check complete."
 
 ### Good Practices for Shell Scripting
 
-1. **Use Comments**  
+1. **Use Comments**
+
    - Describe the purpose, author, and date at the top.
 
-2. **Add `echo` Statements**  
+2. **Add `echo` Statements**
+
    - Use `echo` to clearly indicate each action for readability.
 
-3. **Set Proper Permissions**  
+3. **Set Proper Permissions**
+
    - Use `chmod` (e.g., `chmod +x script.sh`) to make scripts executable.
 
-4. **Use Descriptive Naming**  
+4. **Use Descriptive Naming**
+
    - Name variables meaningfully, like `total_memory` or `disk_usage`.
 
-5. **Handle Errors**  
+5. **Handle Errors**
+
    - Use `||` for error handling and set appropriate exit codes.
 
-6. **Avoid Hardcoding**  
+6. **Avoid Hardcoding**
+
    - Store paths in variables or use environment variables.
 
-7. **Test Before Production**  
+7. **Test Before Production**
    - Always test scripts locally to avoid unexpected issues.
 
 Following these guidelines helps create efficient, reliable, and maintainable shell scripts.
 
+_Instead of using `echo` everywhere as `echo` is not feasible use `set -x` at the start like this :_
 
-*Instead of using `echo` everywhere as `echo` is not feasible use `set -x` at the start like this :*
-
-```shell 
+```shell
 #!/bin/bash
 
 
@@ -77,7 +82,6 @@ nproc
 echo "Node health check complete."
 ```
 
-
 ### Command: `ps -ef`
 
 The `ps -ef` command is used in Unix/Linux systems to display a list of all running processes in a detailed format.
@@ -91,6 +95,7 @@ The command `ps -ef | grep "amazon"` is used to search for running processes rel
 ## Breakdown of the Command
 
 1. **`ps -ef`**:
+
    - The `ps` command displays information about active processes.
    - The `-e` flag shows all processes on the system.
    - The `-f` flag provides a full-format listing, including additional details such as the user, PID, parent process ID, start time, and command.
@@ -104,7 +109,7 @@ The command `ps -ef | grep "amazon"` is used to search for running processes rel
 ```bash
 ps -ef | grep "amazon"
 
-### Sample Output 
+### Sample Output
 
 root      1234     1  0 10:00 ?        00:00:01 /usr/bin/amazon-cloudwatch-agent
 user      2345  5678  0 10:05 ?        00:00:00 /amazon/kinesis-agent
@@ -112,10 +117,9 @@ user      4567  6789  0 10:10 pts/0    00:00:00 grep --color=auto amazon
 ```
 
 **One interview question**:
-*What is the output for `date | echo "Today is"`*
+_What is the output for `date | echo "Today is"`_
 
 > Hint : system command, stdin, stdout, stderr .......
-
 
 Here we get a ID to for each process so to get process with id use :
 
@@ -129,3 +133,30 @@ ps -ef | grep snapfuse | awk -F" " '{print $2}'
 - **`set -o pipefail`**: Ensures that if any command in a pipeline (`|`) fails, the entire pipeline is considered failed. This helps detect errors in command chains.
 
 Together, these options make your script more reliable by stopping on errors instead of continuing with potential issues.
+
+**Example script :**
+
+```bash
+#!/bin/bash
+
+
+
+set -x # debug mode
+
+# this is a best practice when you use pipe '|' in shell scripting
+set -e          # exit the script when there is an error
+set -o pipefail # use this to avoid error due to command after |
+
+df -h
+
+# doaisdjiosdlhslkas | echo | kjfbadbadbaw | echo  ------ here it see last command as echo so it exceutes but it should not
+#                   so that's why we use 'set -o pipefail'
+
+free -g
+
+nproc
+
+ps -ef | grep snapfuse | awk -F" " '{print $2}'
+
+echo "Node health check complete."
+```
