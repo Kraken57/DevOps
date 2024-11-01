@@ -106,7 +106,6 @@ ps -ef | grep "amazon"
 
 ### Sample Output 
 
-```shell
 root      1234     1  0 10:00 ?        00:00:01 /usr/bin/amazon-cloudwatch-agent
 user      2345  5678  0 10:05 ?        00:00:00 /amazon/kinesis-agent
 user      4567  6789  0 10:10 pts/0    00:00:00 grep --color=auto amazon
