@@ -111,5 +111,21 @@ user      2345  5678  0 10:05 ?        00:00:00 /amazon/kinesis-agent
 user      4567  6789  0 10:10 pts/0    00:00:00 grep --color=auto amazon
 ```
 
+**One interview question**:
+*What is the output for `date | echo "Today is"`*
+
+> Hint : system command, stdin, stdout, stderr .......
+
+
 Here we get a ID to for each process so to get process with id use :
 
+```bash
+ps -ef | grep snapfuse | awk -F" " '{print $2}'
+```
+
+### Using `set -e` and `set -o pipefail` in Shell Scripts
+
+- **`set -e`**: This option stops the script if any command returns a non-zero exit status (i.e., fails). It helps catch errors early by halting execution.
+- **`set -o pipefail`**: Ensures that if any command in a pipeline (`|`) fails, the entire pipeline is considered failed. This helps detect errors in command chains.
+
+Together, these options make your script more reliable by stopping on errors instead of continuing with potential issues.
