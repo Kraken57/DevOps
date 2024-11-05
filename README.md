@@ -1,6 +1,6 @@
 # DevOps
 
-<img src="https://readme-typing-svg.herokuapp.com/?font=ubuntu&color=%23B335F7&size=22&vCenter=true&height=40&lines=Learn+Devops+:);">
+<img src="https://readme-typing-svg.herokuapp.com/?font=ubuntu&color=%36BCF7FF&size=22&vCenter=true&height=40&lines=Learn+Devops+:);">
 
 Topics studied till now :
 
