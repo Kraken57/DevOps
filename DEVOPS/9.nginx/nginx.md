@@ -10,7 +10,7 @@
 
 1. ```bash
    sudo apt update
-   sudo apt install ngnix
+   sudo apt install nginx
    ```
 
 > This should start a `nginx server` at port 80
@@ -64,4 +64,4 @@
     ```
 
 5. Run this `sudo nginx -s reload` to reload nginx
->Now if you to you app_url you will see your application 
+>Now if you go to you app_url you will see your application 
