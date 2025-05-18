@@ -11,3 +11,4 @@ Topics studied till now :
 5. [AWS CLI Guide](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/5.AWSCLI/cli.md)
 6. [Shell-Scripting](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/6.shell-scripting/shell.md)
 7. [Advanced Shell-Scripting](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/7.advanced-shell-scripting/adv-ss.md)
+8. [Nginx and Reverse Proxy in AWS](https://github.com/Kraken57/DevOps/blob/main/DEVOPS/9.nginx/nginx.md)
